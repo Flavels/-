@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #00B0EC;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 24px;
+    color: red;
+}
+
+.nav-items input[type="search"] {
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+.category-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    margin-right: 20px;
+}
+
+.category-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.account-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+}
