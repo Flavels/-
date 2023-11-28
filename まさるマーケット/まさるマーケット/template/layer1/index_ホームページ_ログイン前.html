@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>まさる堂 - 中古取引プラットフォーム</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
-
+<div id="homepage_login">
     <!-- ナビゲーションバー -->
     <nav>
         <!-- ロゴ -->
         <div id="logo">
-            <a href="/">まさる堂</a>
+            <a href="/"><img src="../../image/masaru.png" alt=""></a>
         </div>
         
         <!-- 検索ボックス -->
         <div id="search-box">
             <input type="text" placeholder="商品を検索...">
-            <button>検索</button>
+            <button><a href=""></a>検索</button>
         </div>
         
         <!-- アカウントメニュー -->
         <div id="account-menu">
-            <a href="register.html">新規登録</a>
+            <a href="register.html" id="register">新規登録</a>
             <a href="login.html">ログイン</a>
         </div>
         
@@ -42,40 +42,49 @@
 
     <!-- メインコンテンツ -->
     <main>
-        <!-- スライドショー -->
-        <section id="carousel">
-            <img src="promo1.jpg" alt="プロモーション 1">
-            <img src="promo2.jpg" alt="プロモーション 2">
-            <!-- 他のスライド内容 -->
-        </section>
-        
-        <!-- 商品リスト -->
-        <section id="product-list">
-            <!-- 注目商品やおすすめ商品の展示 -->
-            <div class="product-item">
-                <img src="product1.jpg" alt="商品1">
-                <p>商品1の説明</p>
-                <button>詳細を見る</button>
+        <div id="category">
+            <div id="category-flex">
+                <h3><a href="#">ファッション</a></h3>
+                <h3><a href="#">スポーツ</a></h3>
+                <h3><a href="#">家電・TV・カメラ</a></h3>
+                <h3><a href="#">キッズ・ベビー・玩具</a></h3>
+                <h3><a href="#">ゲーム・ホビー・楽器</a></h3>
+                <h3><a href="#">コスメ・健康・医薬品</a></h3>
             </div>
-            <!-- 他の商品内容 -->
-        </section>
-        
-        <!-- 商品カテゴリー -->
-        <section id="product-categories">
-            <h2>商品カテゴリー</h2>
-            <ul>
-                <li><a href="#">カテゴリー1</a></li>
-                <li><a href="#">カテゴリー2</a></li>
-                <!-- 他のカテゴリー -->
-            </ul>
-        </section>
+        </div>
+        <div id="shouhin-ichiran">
+            <div id="shouhin">
+                <img src="../../image/shirt.png" alt="">
+                <h2>1000円</h2>
+            </div>
+            <div id="shouhin">
+                <img src="../../image/shirt.png" alt="">
+                <h2>2000円</h2>
+            </div>
+            <div id="shouhin">
+                <img src="../../image/shirt.png" alt="">
+                <h2>3000円</h2>
+            </div>
+            <div id="shouhin">
+                <img src="../../image/shirt.png" alt="">
+                <h2>1500円</h2>
+            </div>
+            <div id="shouhin">
+                <img src="../../image/shirt.png" alt="">
+                <h2>4000円</h2>
+            </div>
+            <div id="shouhin">
+                <img src="../../image/shirt.png" alt="">
+                <h2>2500円</h2>
+            </div>
+        </div>
     </main>
 
     <!-- フッター -->
     <footer>
         <!-- フッター内容 -->
     </footer>
-
+</div>
     <!-- JavaScriptファイル -->
     <script src="scripts.js"></script>
 </body>
