@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登録 - まさる堂</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../../image/masaru.png");
+    background-size: 300px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="newaccount">
+    <header>
+        <a href="/まさるマーケット/template/layer2_for_ hp_before_login/ログインページ.html">まさる堂</a>
+    </header>
+
+    <main>
+        <h1>新規登録</h1>
+        <form id="registration-form">
+            <label for="username">ユーザー名:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">パスワード:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="confirm-password">パスワード確認:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required><br>
+
+            <input type="submit" value="登録" id="submit">
+        </form>
+    </main>
+
+    <footer>
+        <!-- フッター内容 -->
+    </footer>
+
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/signup.js"></script>
+    </div>
+</body>
+
+</html>

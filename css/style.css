@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #00B0EC;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 24px;
+    color: red;
+}
+
+.nav-items input[type="search"] {
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+.category-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    margin-right: 20px;
+}
+
+.category-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.account-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* ログインページに対してのCSS */
+#login{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#login header{
+    text-align: center;
+}
+#login header a{
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    font-weight: bolder;
+}
+#login main{
+    background-color: white;
+    border: groove black 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#login h1{
+    text-align: center;
+}
+
+#login input{
+    width: 100%;
+    padding: 5px 0px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+#login input[type=submit]{
+    display: block;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#login #submit:hover{
+    opacity: 80%;
+}
+/* ログインページ終了 */
+
+/* 新規登録ページに対してのCSS */
+#newaccount{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#newaccount header{
+    text-align: center;
+}
+#newaccount header a{
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    font-weight: bolder;
+}
+#newaccount main{
+    background-color: white;
+    border: groove black 10px;
+    padding: 10px 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+#newaccount h1{
+    text-align: center;
+}
+
+#newaccount input{
+    width: 100%;
+    padding: 5px 0px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+#newaccount input[type=submit]{
+    display: block;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#newaccount #submit:hover{
+    opacity: 80%;
+}
+
+/* 新規登録終了 */
+
+/* homepage  logo*/
+#homepage_login #logo img{
+    border-radius: 5px;
+    width: 70px;
+}
+
+#homepage_login nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    height: 70px;
+}
+
+#homepage_login nav div{
+    margin-right: 30px;
+    font-size: 1.2em;
+}
+#homepage_login nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#homepage_login #search-box{
+    display: flex;
+}
+#homepage_login #search-box input{
+    width: 500px;
+    padding: 15px;
+    border: none;
+}
+#homepage_login #search-box button{
+    background-color: #ffc36c;
+    border: none;
+    width: 80px;
+}
+#homepage_login #search-box button:hover{
+    border: none;
+    opacity: .7;
+}
+
+/* account-menu nav */
+#homepage_login #account-menu #register{
+    margin-right: 30px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* category loginpage */
+
+#homepage_login #category{
+    background: #232f3e;
+    color: white;
+    padding: 10px;
+}
+#homepage_login #category #category-flex{
+    display: flex;
+    justify-content: center;
+}
+
+#homepage_login #category #category-flex a{
+    color: white;
+}
+
+#homepage_login #category #category-flex h3{
+    margin-right: 30px;
+}
+
+/* 商品一覧 --------------------- */
+
+#shouhin-ichiran{
+    display: flex;
+    flex-wrap: wrap;
+}
+#shouhin-ichiran #shouhin{
+    width: calc(33.3% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+#shouhin-ichiran img{
+    max-width: 100%;
+}

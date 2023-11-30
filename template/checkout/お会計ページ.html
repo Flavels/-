@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お会計 - まさる堂</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <a href="/">まさる堂</a>
+        <a href="product-detail.html">商品詳細に戻る</a>
+    </header>
+
+    <!-- お会計内容 -->
+    <main>
+        <h1>お会計情報</h1>
+
+        <!-- 注文の概要 -->
+        <section id="order-summary">
+            <h2>注文の概要</h2>
+            <!-- 注文された商品の詳細リスト -->
+            <ul>
+                <li>商品名: <span>商品詳細</span></li>
+                <li>数量: <span>1</span></li>
+                <li>価格: <span>¥5,000</span></li>
+                <!-- ...他の注文された商品... -->
+            </ul>
+        </section>
+
+        <!-- 配送先情報 -->
+        <section id="shipping-address">
+            <h2>配送先情報</h2>
+            <p>配送先住所を選択または入力してください。</p>
+            <!-- 配送先住所の入力フォーム -->
+            <form id="shipping-form">
+                <label for="address">住所:</label>
+                <input type="text" id="address" name="address" required><br>
+
+                <label for="postal-code">郵便番号:</label>
+                <input type="text" id="postal-code" name="postal-code" required><br>
+
+                <label for="city">市区町村:</label>
+                <input type="text" id="city" name="city" required><br>
+
+                <label for="phone-number">電話番号:</label>
+                <input type="tel" id="phone-number" name="phone-number" required><br>
+            </form>
+        </section>
+
+        <!-- お支払い方法 -->
+        <section id="payment-method">
+            <h2>お支払い方法</h2>
+            <!-- 支払い方法の選択 -->
+            <select>
+                <option value="credit-card">クレジットカード</option>
+                <option value="bank-transfer">銀行振り込み</option>
+                <!-- ...他の支払い方法... -->
+            </select>
+        </section>
+
+        <!-- 配達方法 -->
+        <section id="delivery-method">
+            <h2>配達方法</h2>
+            <!-- 配送オプションの選択 -->
+            <select>
+                <option value="standard">通常配送</option>
+                <option value="express">急行配送</option>
+                <!-- ...他の配達方法... -->
+            </select>
+        </section>
+
+        <!-- 注文確認ボタン -->
+        <section id="confirm-order">
+            <button id="place-order">注文を確定する</button>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <!-- フッター内容 -->
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
