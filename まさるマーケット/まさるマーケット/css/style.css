@@ -2,6 +2,10 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 
 .header {
     background-color: #00B0EC;
@@ -109,8 +113,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-color: black;
-    color: white;
     height: 70px;
 }
 
@@ -120,12 +122,13 @@ body {
 }
 #homepage_login nav a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
 #homepage_login #search-box{
     display: flex;
+    border: grey 1px solid;
 }
 #homepage_login #search-box input{
     width: 500px;
@@ -152,8 +155,7 @@ body {
 /* category loginpage */
 
 #homepage_login #category{
-    background: #232f3e;
-    color: white;
+    background: #f0f3f7;
     padding: 10px;
 }
 #homepage_login #category #category-flex{
@@ -162,26 +164,106 @@ body {
 }
 
 #homepage_login #category #category-flex a{
-    color: white;
+    color: black;
 }
 
 #homepage_login #category #category-flex h3{
     margin-right: 30px;
 }
 
+/* 真贋チェックボックス */
+
+#shingan-page{ 
+    font-size: 1.5em; 
+    margin-left: 25px; 
+    padding-top: 10px;
+}
+#shingan-box{
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+/* チェックマーク */
+#verify-button img{
+    width: 40px;
+}
 /* 商品一覧 --------------------- */
 
-#shouhin-ichiran{
+#shouhin-ichiran {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
 }
-#shouhin-ichiran #shouhin{
+
+#shouhin-ichiran #shouhin, #shouhin-ichiran #shouhin-shingan{
     width: calc(33.3% - 20px);
     margin: 10px;
     box-sizing: border-box;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
 }
-#shouhin-ichiran img{
+
+#shouhin-ichiran #shouhin img,#shouhin-ichiran #shouhin-shingan img {
     max-width: 100%;
+    height: auto;
+}
+
+#shouhin-ichiran #shouhin h2, #shouhin-ichiran #shouhin-shingan h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: #f0f3f7;
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
 }
 
 /* オンラインチャットページに対してのCSS */
@@ -357,4 +439,56 @@ body {
 
 /* 商品登録ページ */
 
-#seller_page
+.seller_page {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.seller_page h1 {
+    text-align: center;
+    color: #362e2e;
+}
+
+.seller_page .form-group {
+    margin-bottom: 15px;
+}
+
+.seller_page .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.seller_page .form-group input[type="text"],
+.seller_page .form-group input[type="number"],
+.seller_page .form-group input[type="file"],
+.seller_page .form-group select,
+.seller_page .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.seller_page .form-group textarea {
+    height: 100px;
+}
+
+.seller_page button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seller_page button:hover {
+    background: #555;
+}
+
+/* 商品登録ページ終了 */

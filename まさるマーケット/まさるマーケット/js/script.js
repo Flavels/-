@@ -28,3 +28,14 @@ function checkLoginStatus() {
     return localStorage.getItem('isLoggedIn') === 'true';
 }
 
+//ホムページ真贋チェックボックス
+const toggleDiv = document.getElementById('shingan-box');
+const shouhinShinganDivs = document.querySelectorAll('#shouhin-ichiran #shouhin');
+
+toggleDiv.addEventListener('change', function () {
+    shouhinShinganDivs.forEach(div => {
+        div.style.display = this.checked ? 'none' : 'block';
+    });
+});
+////////////////////////////////////
+
