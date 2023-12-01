@@ -2,37 +2,53 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品登録 - まさる堂</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>商品出品ページ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="/">まさる堂</a>
-        <a href="seller-center.html">セラーセンターに戻る</a>
-    </header>
-
-    <main>
-        <h1>商品登録</h1>
-        <form id="product-registration-form">
-            <label for="product-name">商品名:</label>
-            <input type="text" id="product-name" name="product-name" required><br>
-
-            <label for="product-description">商品説明:</label>
-            <textarea id="product-description" name="product-description" required></textarea><br>
-
-            <label for="product-price">価格:</label>
-            <input type="number" id="product-price" name="product-price" required><br>
-
-            <label for="product-image">商品画像:</label>
-            <input type="file" id="product-image" name="product-image" accept="image/*"><br>
-
-            <input type="submit" value="登録">
+    <div class="seller_page">
+    <div class="container">
+        <h1>商品出品フォーム</h1>
+        <form action="/submit-product" method="post">
+            <div class="form-group">
+                <label for="productName">商品名：</label>
+                <input type="text" id="productName" name="productName">
+            </div>
+            <div class="form-group">
+                <label for="category">商品カテゴリー：</label>
+                <select id="category" name="category">
+                    <option value="fashion">ファッション</option>
+                    <option value="sports">スポーツ</option>
+                    <option value="stationery">文房具</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">商品価格：</label>
+                <input type="number" id="price" name="price">
+            </div>
+            <div class="form-group">
+                <label for="image">商品画像：</label>
+                <input type="file" id="image" name="image">
+            </div>
+            <div class="form-group">
+                <label for="condition">商品状態：</label>
+                <select id="condition" name="condition">
+                    <option value="new">新品未使用</option>
+                    <option value="like-new">ほぼ新品</option>
+                    <option value="gently-used">新品ではないが使用感少ない</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="details">商品詳細：</label>
+                <textarea id="details" name="details"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shippingTime">発送までの日数：</label>
+                <input type="number" id="shippingTime" name="shippingTime">
+            </div>
+            <button type="submit">出品する</button>
         </form>
-    </main>
-
-    <footer>
-        <!-- フッター内容 -->
-    </footer>
+    </div>
+</div>
 </body>
 </html>

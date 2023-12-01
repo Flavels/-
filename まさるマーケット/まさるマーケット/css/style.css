@@ -8,7 +8,7 @@ body {
     padding: 10px 0;
 }
 
-.navbar {
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -355,4 +355,6 @@ body {
 }
 /* よくある質問ページ終了 */
 
-/*  */
+/* 商品登録ページ */
+
+#seller_page
