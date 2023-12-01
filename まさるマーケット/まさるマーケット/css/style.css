@@ -12,24 +12,6 @@ a{
     padding: 10px 0;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.navbar .logo a {
-    text-decoration: none;
-    font-size: 24px;
-    color: red;
-}
-
-.nav-items input[type="search"] {
-    padding: 5px 10px;
-    margin-right: 20px;
-}
-
 .category-list {
     list-style: none;
     display: flex;
@@ -102,13 +84,13 @@ a{
 }
 /* ログインと新規登録ページ終了 */
 
-/* homepage  logo*/
-#homepage_login #logo img{
+/* navbar  logo*/
+nav #logo img{
     border-radius: 5px;
     width: 70px;
 }
 
-#homepage_login nav{
+nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,31 +98,31 @@ a{
     height: 70px;
 }
 
-#homepage_login nav div{
+nav div{
     margin-right: 30px;
     font-size: 1.2em;
 }
-#homepage_login nav a{
+nav a{
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-#homepage_login #search-box{
+nav #search-box{
     display: flex;
     border: grey 1px solid;
 }
-#homepage_login #search-box input{
+nav #search-box input{
     width: 500px;
     padding: 15px;
     border: none;
 }
-#homepage_login #search-box button{
+nav #search-box button{
     background-color: #ffc36c;
     border: none;
     width: 80px;
 }
-#homepage_login #search-box button:hover{
+nav #search-box button:hover{
     border: none;
     opacity: .7;
 }
