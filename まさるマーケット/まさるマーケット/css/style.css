@@ -374,6 +374,8 @@ body {
     margin-bottom: 15px;
 }
 
+
+
 .seller_page .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -394,13 +396,14 @@ body {
 .seller_page .form-group select,
 .seller_page .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 .seller_page .form-group textarea {
     height: 100px;
+    width: 500px;
 }
 
 .seller_page button {

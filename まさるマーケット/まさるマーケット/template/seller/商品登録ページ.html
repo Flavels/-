@@ -8,7 +8,7 @@
 <body>
     <div class="seller_page">
     <div class="container">
-        <h1>商品出品フォーム</h1>
+        <h1>商品を出品</h1>
         <form action="/submit-product" method="post">
             <div class="form-group">
                 <label for="productName">商品名：</label>
@@ -23,8 +23,10 @@
                 </select>
             </div>
             <div class="form-group">
+                <div id="name">
                 <label for="price">商品価格：</label>
                 <input type="number" id="price" name="price">
+                </div>
             </div>
             <div class="form-group">
                 <label for="image">商品画像：</label>
