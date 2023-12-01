@@ -48,41 +48,41 @@ body {
     margin-left: 10px;
 }
 
-/* ログインページに対してのCSS */
-#login{
+/* ログインと新規登録ページに対してのCSS */
+#login, #newaccount{
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#login header{
+#login header, #newaccount header{
     text-align: center;
 }
-#login header a{
+#login header a, #newaccount header a{
     text-decoration: none;
     color: white;
     font-size: 3em;
     font-weight: bolder;
 }
-#login main{
+#login main, #newaccount main{
     background-color: white;
     border: groove black 10px;
     padding: 20px;
     border-radius: 10px;
 }
-#login h1{
+#login h1, #newaccount h1{
     text-align: center;
 }
 
-#login input{
+#login input, #newaccount input{
     width: 100%;
     padding: 5px 0px;
     margin: 8px 0;
     box-sizing: border-box;
   }
 
-#login input[type=submit]{
+#login input[type=submit], #newaccount input[type=submit]{
     display: block;
     border-radius: 5px;
     margin-left: auto;
@@ -93,62 +93,10 @@ body {
     font-weight: bolder;
     cursor: pointer;
 }
-#login #submit:hover{
+#login #submit:hover, #newaccount #submit:hover{
     opacity: 80%;
 }
-/* ログインページ終了 */
-
-/* 新規登録ページに対してのCSS */
-#newaccount{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#newaccount header{
-    text-align: center;
-}
-#newaccount header a{
-    text-decoration: none;
-    color: white;
-    font-size: 3em;
-    font-weight: bolder;
-}
-#newaccount main{
-    background-color: white;
-    border: groove black 10px;
-    padding: 10px 20px;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-#newaccount h1{
-    text-align: center;
-}
-
-#newaccount input{
-    width: 100%;
-    padding: 5px 0px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-
-#newaccount input[type=submit]{
-    display: block;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: black;
-    color: white;
-    font-size: large;
-    font-weight: bolder;
-    cursor: pointer;
-}
-#newaccount #submit:hover{
-    opacity: 80%;
-}
-
-/* 新規登録終了 */
+/* ログインと新規登録ページ終了 */
 
 /* homepage  logo*/
 #homepage_login #logo img{
@@ -235,3 +183,174 @@ body {
 #shouhin-ichiran img{
     max-width: 100%;
 }
+
+/* オンラインチャットページに対してのCSS */
+#onchat{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#onchat header{
+    text-align: center;
+}
+#onchat header a{
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    font-weight: bolder;
+}
+#onchat main{
+    background-color: white;
+    border: groove black 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#onchat h1{
+    text-align: center;
+}
+
+#onchat #chat-box{
+    overflow-y: scroll;
+    display: flex;
+    border: dotted black 1px;
+    width: 350px;
+    height: 200px;
+    flex-direction: column;
+}
+#onchat input{
+    width: 100%;
+    padding: 5px 0px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+#onchat #btn{
+    display: flex;
+    align-items: center;
+}
+#onchat #btn #send-message{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#onchat #btn button, #onchat #btn a{
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#onchat #btn button:hover{
+    opacity: 75%;
+}
+/* オンラインチャット終了 */
+
+/*問い合わせページに対してのCSS */
+#help{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#help header{
+    text-align: center;
+}
+#help header a{
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    font-weight: bolder;
+}
+#help main{
+    width: 250px;
+    background-color: white;
+    border: groove black 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#help h1{
+    text-align: center;
+}
+#help button:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+#help button a{
+    text-decoration: none;
+    color: black;
+}
+#help main #back{
+    width: 50%;
+    padding: 5px 0px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#help main #back a{
+    color: white;
+}
+/* 問い合わせページ終了 */
+
+/*よくある質問ページに対してのCSS */
+#faqs{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#faqs header{
+    text-align: center;
+}
+#faqs header a{
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    font-weight: bolder;
+}
+#faqs main{
+    width: 600px;
+    background-color: white;
+    border: groove black 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#faqs h1{
+    text-align: center;
+}
+
+#faqs main button a{
+    text-decoration: none;
+    color: white;
+}
+#faqs main button{
+    width: 50%;
+    padding: 5px 0px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#faqs main #faq-content{
+    border: groove black 5px;
+    height: 250px;
+    overflow-y: scroll;
+}
+/* よくある質問ページ終了 */

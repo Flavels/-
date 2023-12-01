@@ -5,45 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>問い合わせ - まさる堂</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/まさるマーケット/まさるマーケット/css/style.css">
+    <style>
+        body{
+            background-image: url(/まさるマーケット/まさるマーケット/image/masaru.png);
+            background-size: 300px;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="help">
+        <!-- ヘッダー (前のページに戻る、ホームなどのリンクを考慮することができます) -->
+        <header>
+            <a href="/">まさる堂</a>
+        </header>
 
-    <!-- ヘッダー (前のページに戻る、ホームなどのリンクを考慮することができます) -->
-    <header>
-        <a href="/">まさる堂</a>
-        <a href="#">戻る</a>
-    </header>
+        <!-- 問い合わせページの内容 -->
+        <main>
+            <!-- よくある質問 -->
+            <section id="faq">
+                <h2>よくある質問</h2>
+                <button id="view-faqs"><a href="/まさるマーケット/まさるマーケット/template/help/よくある質問ページ.html">FAQを見る</a></button>
+            </section>
 
-    <!-- 問い合わせページの内容 -->
-    <main>
-        <!-- よくある質問 -->
-        <section id="faq">
-            <h2>よくある質問</h2>
-            <button id="view-faqs">FAQを見る</button>
-        </section>
+            <!-- オンラインチャット -->
+            <section id="online-chat">
+                <h2>オンラインチャット</h2>
+                <button id="start-chat"><a href="/まさるマーケット/まさるマーケット/template/help/オンラインチャットページ.html">チャットを開始する</a></button>
+            </section>
 
-        <!-- オンラインチャット -->
-        <section id="online-chat">
-            <h2>オンラインチャット</h2>
-            <button id="start-chat">チャットを開始する</button>
-        </section>
+            <!-- 連絡先電話番号 -->
+            <section id="contact-phone">
+                <h2>連絡先電話番号</h2>
+                <p>0123-456-789</p>
+            </section>
+            <button id="back"><a href="#">戻る</a></button>
+        </main>
 
-        <!-- 連絡先電話番号 -->
-        <section id="contact-phone">
-            <h2>連絡先電話番号</h2>
-            <p>0123-456-789</p>
-        </section>
-    </main>
+        <!-- フッター (必要に応じて追加) -->
+        <footer>
+            <!-- ...フッター内容... -->
+        </footer>
 
-    <!-- フッター (必要に応じて追加) -->
-    <footer>
-        <!-- ...フッター内容... -->
-    </footer>
-
-    <!-- JavaScriptファイルのリンク -->
-    <script src="scripts.js"></script>
+        <!-- JavaScriptファイルのリンク -->
+        <script src="scripts.js"></script>
+    </div>
 </body>
 
 </html>
