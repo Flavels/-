@@ -379,6 +379,15 @@ body {
     margin-bottom: 5px;
 }
 
+.seller_page .form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.seller_page .form-group label {
+    font-weight: normal;
+}
+
+
 .seller_page .form-group input[type="text"],
 .seller_page .form-group input[type="number"],
 .seller_page .form-group input[type="file"],
