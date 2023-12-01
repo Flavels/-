@@ -357,4 +357,56 @@ body {
 
 /* 商品登録ページ */
 
-#seller_page
+.seller_page {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.seller_page h1 {
+    text-align: center;
+    color: #333;
+}
+
+.seller_page .form-group {
+    margin-bottom: 15px;
+}
+
+.seller_page .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.seller_page .form-group input[type="text"],
+.seller_page .form-group input[type="number"],
+.seller_page .form-group input[type="file"],
+.seller_page .form-group select,
+.seller_page .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.seller_page .form-group textarea {
+    height: 100px;
+}
+
+.seller_page button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seller_page button:hover {
+    background: #555;
+}
+
+/* 商品登録ページ終了 */
