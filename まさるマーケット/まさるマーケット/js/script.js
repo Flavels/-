@@ -3,6 +3,7 @@ $(document).ready(function() {
     $("#navbar-placeholder").load("../common/navbar.html", function() {
         updateAccountMenu();
     });
+    $("#footer-placeholder").load("../common/footer.html");
 });
 
 // 根据登录状态更新账户菜单
