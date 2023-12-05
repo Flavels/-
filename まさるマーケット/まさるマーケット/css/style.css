@@ -123,10 +123,16 @@ nav #search-box button:hover{
     opacity: .7;
 }
 
-/* account-menu nav */
-#homepage_login #account-menu #register{
+nav #account-menu #register{
     margin-right: 30px;
 }
+nav #account-menu #login{
+    margin-right: 30px;
+}
+nav #account-menu #myaccount{
+    margin-right: 30px;
+}
+
 
 /* ---------------------------------------------------------- */
 

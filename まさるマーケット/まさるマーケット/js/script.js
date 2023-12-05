@@ -1,33 +1,132 @@
 $(document).ready(function() {
-    // 加载导航栏并插入到页面中
+    // insert navbar and footer into other htmls
     $("#navbar-placeholder").load("../common/navbar.html", function() {
-        updateAccountMenu();
+        updateNavbarLinks();
+        redirectIfNotLoggedIn();
     });
     $("#footer-placeholder").load("../common/footer.html");
+
+    // sign up
+    $('#registration-form').on('submit', function(e) {
+        e.preventDefault();
+        registerUser();
+    });
+
+    // login
+    $('#login-form').on('submit', function(e) {
+        e.preventDefault();
+        loginUser();
+    });
+
+    // 每次页面加载时检查会话
+    checkSession();
+
+    // logout
+    $('#logout-btn').on('click', function() {
+        logoutUser();
+    });
 });
 
-// 根据登录状态更新账户菜单
-function updateAccountMenu() {
-    const isLoggedIn = checkLoginStatus(); // 检查登录状态的函数
+function registerUser() {
+    var username = $('#username').val();
+    var email = $('#email').val();
+    var password = $('#password').val();
+    var confirmPassword = $('#confirm-password').val();
 
-    if (isLoggedIn) {
-        $("#register").hide();
-        $("#login").hide();
-        $("#myaccount").show();
+    if (password !== confirmPassword) {
+        alert('パスワードが一致しません。');
+        return;
+    }
+
+    // 将用户信息保存到 localStorage
+    var userData = {
+        username: username,
+        email: email,
+        password: password
+    };
+    localStorage.setItem('userData', JSON.stringify(userData));
+    alert('登録が完了しました。');
+    window.location.href = '../account_auth/login.html'; // 重定向到登录页面
+}
+
+function loginUser() {
+    var email = $('#email').val();
+    var password = $('#password').val();
+    var userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (userData && userData.email === email && userData.password === password) {
+        // 设置会话过期时间为5分钟
+        var expireTime = new Date(new Date().getTime() + 5 * 60000);
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('sessionExpire', expireTime.getTime());
+        window.location.href = '../home/homepage.html'; // 重定向到主页
     } else {
-        $("#register").show();
-        $("#login").show();
-        $("#myaccount").hide();
+        alert('メールアドレスまたはパスワードが正しくありません。');
     }
 }
 
-// 示例函数：检查用户是否登录
-function checkLoginStatus() {
-    // 这里应该包含检查用户登录状态的代码
-    // 例如，可以从localStorage、cookies或服务器端session获取
-    // 下面的代码仅为示例
-    return localStorage.getItem('isLoggedIn') === 'true';
+function checkSession() {
+    var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    var sessionExpire = localStorage.getItem('sessionExpire');
+
+    if (isLoggedIn && sessionExpire && new Date().getTime() > Number(sessionExpire)) {
+        // 会话过期，清除登录状态
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('sessionExpire');
+        // 根据需要可以添加重定向到登录页面的代码
+    }
 }
+
+
+function updateNavbarLinks() {
+    var isLoggedIn = checkLoginStatus();
+
+    if (isLoggedIn) {
+        $('#register').hide();
+        $('#login').hide();
+        $('#myaccount').show();
+    } else {
+        $('#register').show();
+        $('#login').show();
+        $('#myaccount').hide();
+    }
+}
+
+function redirectIfNotLoggedIn() {
+    $('#buy-history, #cart, #favorites').on('click', function(e) {
+        if (!checkLoginStatus()) {
+            e.preventDefault();
+            window.location.href = '../account_auth/login.html'; // 修改为登录页面的路径
+        }
+    });
+}
+
+function checkLoginStatus() {
+    var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    var sessionExpire = localStorage.getItem('sessionExpire');
+
+    // 检查是否登录且会话未过期
+    if (isLoggedIn && sessionExpire && new Date().getTime() < Number(sessionExpire)) {
+        return true;
+    } else {
+        // 如果会话过期或未登录，清除登录状态和过期时间
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('sessionExpire');
+        return false;
+    }
+}
+
+function logoutUser() {
+    // 清除本地存储中的登录信息
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('sessionExpire');
+
+    // 重定向到登录页面或主页
+    window.location.href = '../account_auth/login.html';
+}
+//ここまでは sign up ,login,logout機能,session 5分間/////////////////
+//////////////////////////////////////////////////////////////////
+
 
 //ホムページ真贋チェックボックス
 const toggleDiv = document.getElementById('shingan-box');
@@ -40,3 +139,28 @@ toggleDiv.addEventListener('change', function () {
 });
 ////////////////////////////////////
 
+
+// navbar searching
+$("#searching").on('click', function() {
+    var searchTerm = $("#search-items").val();
+
+    // Check if the search term is not empty
+    if (searchTerm.trim() !== "") {
+        // Redirect to the search result page with the search term as a query parameter
+        window.location.href = '../products/result.html?q=' + encodeURIComponent(searchTerm);
+    } else {
+        // Display a message or handle the case when the search term is empty
+        alert("Please enter a search term.");
+    }
+});
+/////////////////////////////////////
+
+
+// result
+$(document).ready(function() {
+    // Retrieve the search term from the query parameter
+    var searchTerm = decodeURIComponent(window.location.search.replace("?q=", ""));
+    // Display the search result on the result.html page
+    $("#result-container").empty().append(`<h1>${searchTerm}の検索結果:</h1>`);
+});
+////////////////////////////////////
