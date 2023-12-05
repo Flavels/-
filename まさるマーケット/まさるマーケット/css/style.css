@@ -36,20 +36,11 @@ a{
 
 /* ログインと新規登録ページに対してのCSS */
 #login, #newaccount{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-#login header, #newaccount header{
-    text-align: center;
-}
-#login header a, #newaccount header a{
-    text-decoration: none;
-    color: white;
-    font-size: 3em;
-    font-weight: bolder;
 }
 #login main, #newaccount main{
     background-color: white;
@@ -91,16 +82,19 @@ nav #logo img{
 }
 
 nav{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
     height: 70px;
     background-color: white;
+    z-index: 1;
 }
 
 nav div{
-    margin-right: 30px;
+    margin-right: 10px;
     font-size: 1.2em;
 }
 nav a{
@@ -144,6 +138,7 @@ nav #search-box button:hover{
 #homepage_login #category #category-flex{
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 #homepage_login #category #category-flex a{
@@ -204,7 +199,7 @@ nav #search-box button:hover{
 
 /* Footer Styles */
 
-footer {
+footer{
     background-color: #f0f3f7;
     color: black;
     padding: 30px 0;
@@ -212,16 +207,17 @@ footer {
     width: 100%;
 }
 
-#footer-content {
+footer #footer-content {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-}
+} 
 
-.footer-section {
+#footer-content .footer-section {
     margin-bottom: 20px;
 }
 
-.footer-section h4 {
+#footer-content .footer-section h4 {
     margin-bottom: 10px;
 }
 
@@ -251,7 +247,7 @@ ul li a {
 
 /* オンラインチャットページに対してのCSS */
 #onchat{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -262,7 +258,6 @@ ul li a {
 }
 #onchat header a{
     text-decoration: none;
-    color: white;
     font-size: 3em;
     font-weight: bolder;
 }
@@ -315,7 +310,7 @@ ul li a {
 
 /*問い合わせページに対してのCSS */
 #help{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -326,7 +321,6 @@ ul li a {
 }
 #help header a{
     text-decoration: none;
-    color: white;
     font-size: 3em;
     font-weight: bolder;
 }
@@ -369,7 +363,7 @@ ul li a {
 
 /*よくある質問ページに対してのCSS */
 #faqs{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -380,7 +374,7 @@ ul li a {
 }
 #faqs header a{
     text-decoration: none;
-    color: white;
+
     font-size: 3em;
     font-weight: bolder;
 }
