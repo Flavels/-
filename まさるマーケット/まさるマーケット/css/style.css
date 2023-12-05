@@ -470,8 +470,10 @@ ul li a {
 
 /* 商品登録ページ終了 */
 
+/* resultに対するCSS */
 #result-container{
     display: block;
     position: absolute;
     margin:100px 0 0 50px;
-}
+};
+/* result 終了 */
