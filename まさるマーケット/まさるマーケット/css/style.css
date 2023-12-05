@@ -91,6 +91,7 @@ nav{
     height: 70px;
     background-color: white;
     z-index: 1;
+    border-bottom: solid black 1px;
 }
 
 nav div{
