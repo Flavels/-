@@ -475,3 +475,36 @@ ul li a {
 }
 
 /* 商品登録ページ終了 */
+
+/* セラーセンター */
+#sellercentralorders {
+    display: flex;
+    justify-content: space-around; /* or use "space-between" or "space-evenly" for different spacing */
+    align-items: center; /* or use "flex-start" or "flex-end" for different vertical alignment */
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines if needed */
+}
+
+#order {
+    flex: 0 1 calc(30% - 20px); /* Adjust the width as needed; 30% is for three items in a row with some spacing */
+    margin: 10px; /* Adjust the margin as needed for spacing between items */
+}
+
+#order a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Change link color as needed */
+}
+
+#order img {
+    max-width: 100%; /* Make sure the image doesn't exceed the container width */
+}
+
+#order ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center text within the list */
+}
+
+#order li {
+    margin-bottom: 5px; /* Adjust spacing between list items */
+}
