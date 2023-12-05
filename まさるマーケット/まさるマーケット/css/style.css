@@ -36,20 +36,11 @@ a{
 
 /* ログインと新規登録ページに対してのCSS */
 #login, #newaccount{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-#login header, #newaccount header{
-    text-align: center;
-}
-#login header a, #newaccount header a{
-    text-decoration: none;
-    color: white;
-    font-size: 3em;
-    font-weight: bolder;
 }
 #login main, #newaccount main{
     background-color: white;
@@ -103,7 +94,7 @@ nav{
 }
 
 nav div{
-    margin-right: 30px;
+    margin-right: 10px;
     font-size: 1.2em;
 }
 nav a{
