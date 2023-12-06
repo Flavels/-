@@ -25,6 +25,8 @@ $(document).ready(function() {
     $('#logout-btn').on('click', function() {
         logoutUser();
     });
+    displayUsername();
+
 });
 
 function registerUser() {
@@ -59,6 +61,8 @@ function loginUser() {
         var expireTime = new Date(new Date().getTime() + 60 * 60000);
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('sessionExpire', expireTime.getTime());
+        localStorage.setItem('currentUsername', userData.username);
+
         window.location.href = '../home/homepage.html'; // 重定向到主页
     } else {
         alert('メールアドレスまたはパスワードが正しくありません。');
@@ -123,6 +127,13 @@ function logoutUser() {
 
     // 重定向到登录页面或主页
     window.location.href = '../account_auth/login.html';
+}
+
+function displayUsername() {
+    var currentUsername = localStorage.getItem('currentUsername');
+    if (currentUsername) {
+        $('#username-display').text(currentUsername);
+    }
 }
 //ここまでは sign up ,login,logout機能,session 60分間/////////////////
 //////////////////////////////////////////////////////////////////
