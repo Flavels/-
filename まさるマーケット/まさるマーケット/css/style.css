@@ -485,3 +485,46 @@ ul li a {
 };
 
 /* result 終了 */
+
+/* セラーセンター終了 */
+/* セラーセンター終了 */
+#sellercentercontainers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#sellercentercontainers #order {
+    flex: 0 1 calc(20% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#sellercentercontainers #order a {
+    text-decoration: none;
+    color: black;
+}
+
+#sellercentercontainers #order img {
+    max-width: 100%;
+}
+
+#sellercentercontainers #order ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#sellercentercontainers #order li {
+    margin-bottom: 5px;
+}
+
+
+/* セラーセンター終了 */
