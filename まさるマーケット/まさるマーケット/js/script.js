@@ -55,8 +55,8 @@ function loginUser() {
     var userData = JSON.parse(localStorage.getItem('userData'));
 
     if (userData && userData.email === email && userData.password === password) {
-        // 设置会话过期时间为5分钟
-        var expireTime = new Date(new Date().getTime() + 5 * 60000);
+        // 设置会话过期时间为60分钟
+        var expireTime = new Date(new Date().getTime() + 60 * 60000);
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('sessionExpire', expireTime.getTime());
         window.location.href = '../home/homepage.html'; // 重定向到主页
@@ -83,17 +83,17 @@ function updateNavbarLinks() {
 
     if (isLoggedIn) {
         $('#register').hide();
-        $('#login').hide();
+        $('#login-mark').hide();
         $('#myaccount').show();
     } else {
         $('#register').show();
-        $('#login').show();
+        $('#login-mark').show();
         $('#myaccount').hide();
     }
 }
 
 function redirectIfNotLoggedIn() {
-    $('#buy-history, #cart, #favorites').on('click', function(e) {
+    $('#buy-history, #cart, #favorites,#sellercenter-mark').on('click', function(e) {
         if (!checkLoginStatus()) {
             e.preventDefault();
             window.location.href = '../account_auth/login.html'; // 修改为登录页面的路径
@@ -124,7 +124,7 @@ function logoutUser() {
     // 重定向到登录页面或主页
     window.location.href = '../account_auth/login.html';
 }
-//ここまでは sign up ,login,logout機能,session 5分間/////////////////
+//ここまでは sign up ,login,logout機能,session 60分間/////////////////
 //////////////////////////////////////////////////////////////////
 
 
