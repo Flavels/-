@@ -27,6 +27,8 @@ $(document).ready(function() {
     });
 
     displayUsername();
+    displayEmail();
+
 
     $('#password-reset-form').on('submit', function(e) {
         e.preventDefault();
@@ -49,6 +51,20 @@ $(document).ready(function() {
             $('#username').val(userData.username);
         }
     }
+
+    $('#delete-account').on('click', function() {
+        var confirmDelete = confirm('アカウントを削除すると、すべてのデータが失われます。本当に削除しますか？');
+        if (confirmDelete) {
+            // 用户确认删除
+            deleteAccount();
+        }
+    });
+
+    $('#auth-form').on('submit', function(e) {
+        e.preventDefault();
+        authenticateUser();
+    });
+
     // Display Search
     displaySearchResults();
 
@@ -214,6 +230,41 @@ function updateUsername() {
         alert('ログインが必要です。');
         window.location.href = '../account_auth/login.html'; // 修改为实际的登录页面路径
     }
+}
+
+function deleteAccount() {
+    // 假设用户数据存储在 'userData' 键下
+    localStorage.removeItem('userData');
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('currentUsername');
+    localStorage.removeItem('sessionExpire');
+
+    alert('アカウントが削除されました。');
+    window.location.href = '../account_auth/login.html'; // 重定向到登录页面或主页
+}
+
+function displayEmail() {
+    var userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (userData && userData.email) {
+        $('#email-address').text(userData.email);
+    } else {
+        $('#display-email').text('ログインしているメールアドレスはありません。');
+    }
+}
+
+function authenticateUser() {
+    var email = $('#email').val();
+    var authCode = $('#authentication-code').val();
+
+    if (email && authCode) {
+        // 无论输入什么，都显示认证成功的信息
+        alert('ユーザー認証に成功しました。');
+    } else {
+        alert('メールアドレスと認証コードを入力してください。');
+    }
+    window.location.href = '../account/myaccount.html'; // 重定向到登录页面或主页
+
 }
 //ここまでは sign up ,login,logout機能,session 60分間/////////////////
 //////////////////////////////////////////////////////////////////
