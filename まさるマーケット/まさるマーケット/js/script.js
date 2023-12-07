@@ -152,7 +152,7 @@ toggleDiv.addEventListener('change', function () {
 
 
 // navbar searching
-$("#searching").on('click', function() {
+function runsearch() {
     var searchTerm = $("#search-items").val();
 
     // Check if the search term is not empty
@@ -163,15 +163,17 @@ $("#searching").on('click', function() {
         // Display a message or handle the case when the search term is empty
         alert("Please enter a search term.");
     }
-});
+};
 /////////////////////////////////////
 
 
 // result
-$(document).ready(function() {
+function displaySearchResults() {
     // Retrieve the search term from the query parameter
     var searchTerm = decodeURIComponent(window.location.search.replace("?q=", ""));
+    
     // Display the search result on the result.html page
     $("#result-container").empty().append(`<h1>${searchTerm}の検索結果:</h1>`);
-});
+}
+
 ////////////////////////////////////
