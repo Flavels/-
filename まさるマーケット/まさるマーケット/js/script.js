@@ -38,7 +38,7 @@ $(document).ready(function() {
         redirectToPasswordReset();
     });
 
-    $('#edit-account-form').on('submit', function(e) {
+    $('#edit-form').on('submit', function(e) {
         e.preventDefault();
         updateUsername();
     });
