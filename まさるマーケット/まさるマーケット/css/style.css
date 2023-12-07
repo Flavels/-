@@ -82,7 +82,6 @@ nav #logo img{
 }
 
 nav{
-    position: fixed;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -90,8 +89,7 @@ nav{
     padding: 15px;
     height: 70px;
     background-color: white;
-    z-index: 1;
-    border-bottom: solid black 1px;
+    border-bottom: solid rgb(187, 180, 180) 1px;
 }
 
 nav div{
@@ -145,7 +143,6 @@ nav #account-menu #myaccount{
 #homepage_login #category #category-flex{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
 }
 
 #homepage_login #category #category-flex a{
@@ -536,6 +533,12 @@ ul li a {
 
 #sellercentercontainers #order li {
     margin-bottom: 5px;
+}
+
+
+/* shouhin shousai  ----------------------------- */
+#shousai-nakami{
+    margin-top: ;
 }
 
 
