@@ -25,6 +25,7 @@ $(document).ready(function() {
     $('#logout-btn').on('click', function() {
         logoutUser();
     });
+
     displayUsername();
 
     $('#password-reset-form').on('submit', function(e) {
@@ -36,6 +37,18 @@ $(document).ready(function() {
         e.preventDefault();
         redirectToPasswordReset();
     });
+
+    $('#edit-account-form').on('submit', function(e) {
+        e.preventDefault();
+        updateUsername();
+    });
+
+    if (checkLoginStatus()) {
+        var userData = JSON.parse(localStorage.getItem('userData'));
+        if (userData) {
+            $('#username').val(userData.username);
+        }
+    }
     // Display Search
     displaySearchResults();
 
@@ -176,6 +189,30 @@ function redirectToPasswordReset() {
         window.location.href = '../account/password-reset.html'; // 确保路径正确
     } else {
         alert('メールアドレスが見つかりません。');
+    }
+}
+
+function updateUsername() {
+    if (checkLoginStatus()) {
+        // 用户已登录，执行更新用户名的逻辑
+        var newUsername = $('#username').val();
+        var userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (userData && newUsername) {
+        userData.username = newUsername;
+        localStorage.setItem('userData', JSON.stringify(userData));
+        localStorage.setItem('currentUsername', newUsername); // 更新当前用户名
+
+        alert('ユーザー名が更新されました。');
+        // 可选：重定向到其他页面，例如个人资料页面或主页
+        window.location.href = '../account/myaccount.html';
+    } else {
+        alert('新しいユーザー名を入力してください。');
+    }
+    } else {
+        // 用户未登录，显示错误消息或重定向到登录页面
+        alert('ログインが必要です。');
+        window.location.href = '../account_auth/login.html'; // 修改为实际的登录页面路径
     }
 }
 //ここまでは sign up ,login,logout機能,session 60分間/////////////////
