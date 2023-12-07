@@ -27,6 +27,9 @@ $(document).ready(function() {
     });
     displayUsername();
 
+    // Display Search
+    displaySearchResults();
+
 });
 
 function registerUser() {
