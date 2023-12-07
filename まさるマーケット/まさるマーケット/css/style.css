@@ -497,15 +497,24 @@ ul li a {
 
 /* セラーセンター終了 */
 /* セラーセンター終了 */
-#sellercentercontainers {
+/* Add this to your existing CSS file */
+/* Add this to your existing CSS file */
+
+
+.sellercentercontainers {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-#sellercentercontainers #order {
-    flex: 0 1 calc(20% - 20px);
+.order-container {
+    display: flex; /* Add this line */
+}
+
+.order {
+    width: calc(33.3% - 20px);
     margin: 10px;
     box-sizing: border-box;
     padding: 15px;
@@ -515,25 +524,58 @@ ul li a {
     border: 1px solid #ccc;
 }
 
-#sellercentercontainers #order a {
-    text-decoration: none;
-    color: black;
-}
-
-#sellercentercontainers #order img {
+.order img {
     max-width: 100%;
+    height: auto;
 }
 
-#sellercentercontainers #order ul {
+.order ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
 }
 
-#sellercentercontainers #order li {
-    margin-bottom: 5px;
+.order h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
 }
+
+/* Add this to your existing CSS file */
+
+/* Add this to your existing CSS file */
+
+.product-registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Increase padding for more space */
+    background-color: #e0e0e0; /* Set a different background color */
+}
+
+.product-registration h2 {
+    font-size: 2em; /* Increase the font size for the heading */
+    color: #333; /* Set a color for better contrast */
+    margin-bottom: 20px; /* Add margin to separate the text and button */
+}
+
+.register-product {
+    padding: 15px 30px; /* Adjust padding for a larger button */
+    font-size: 1.2em; /* Increase the font size for the button */
+    background-color: #4285f4; /* Set a background color */
+    color: #fff; /* Set text color to white for better visibility */
+    border: none;
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer;
+    text-decoration: none; /* Remove underlines from the link */
+}
+
+.register-product:hover {
+    background-color: #357ae8; /* Change background color on hover */
+}
+
 
 
 /* shouhin shousai  ----------------------------- */
