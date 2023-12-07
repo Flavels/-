@@ -45,7 +45,7 @@ a{
 #login main, #newaccount main{
     background-color: white;
     border: groove black 10px;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
 }
 #login h1, #newaccount h1{
@@ -637,4 +637,4 @@ ul li a {
     color: green;
 }
 
-
+/* セラーセンター終了 */
