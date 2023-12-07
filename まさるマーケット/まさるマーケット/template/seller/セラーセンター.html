@@ -6,75 +6,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>セラーセンター - まさる堂</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        #navbar-placeholder {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Adjust the z-index as needed */
+            /* Add margin or padding to create space for the navbar */
+            margin-bottom: 20px; /* Adjust the value based on your design */
+        }
+
+        main {
+            margin-top: 110px; /* Adjust this value to provide space for the fixed navbar */
+        }
+        h1, h2 {
+            margin-left: 15px;
+        }
+        h1 {
+            margin: 0px;
+            background-color: #e0e0e0;
+            padding:10px;
+        }
+    </style>
 </head>
 
+    <div id="navbar-placeholder"></div>
+
 <body>
-
     <!-- ヘッダー (前のページに戻る、ホームなどのリンクを考慮することができます) -->
-    <header>
-        <a href="/">まさる堂</a>
-    </header>
-
+    
     <!-- セラーセンターの内容 -->
     <main>
-        <h1>Seller Hub</h1>
-
+        <div>
+        <h1>販売ページ</h1>
         <!-- Listings will show up under this -->
         <h2>売るアイテム</h2>
-        <div id="sellercentercontainers">
-            <div id="order">
-                <a href="">
-                    <img src="../../image/shirt.png" alt="">
-                    <ul>
-                        <li>商品1</li>
-                        <li>1000円</li>
-                        <li id="verify-button"><img src="../../image/verified.png" alt=""></li>
-                    </ul>
-                </a>
-            </div>
-            <div id="order">
-                <a href="">
-                    <img src="../../image/shirt.png" alt="">
-                    <ul>
-                        <li>商品2</li>
-                        <li>1000円</li>
-                    </ul>
-                </a>
-            </div>
-            <div id="order">
-                <a href="">
-                    <img src="../../image/shirt.png" alt="">
-                    <ul>
-                        <li>商品3</li>
-                        <li>1000円</li>
-                    </ul>
-                </a>
+        <div class="sellercentercontainers">
+            <div class="order-container">
+                <div class="order">
+                    <a href="">
+                        <img src="../../image/shirt.png" alt="">
+                        <ul>
+                            <li>商品1</li>
+                            <li>1000円</li>
+                            <li id="verify-button"><img src="../../image/verified.png" alt=""></li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="order">
+                    <a href="">
+                        <img src="../../image/shirt.png" alt="">
+                        <ul>
+                            <li>商品2</li>
+                            <li>1000円</li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="order">
+                    <a href="">
+                        <img src="../../image/shirt.png" alt="">
+                        <ul>
+                            <li>商品3</li>
+                            <li>1000円</li>
+                        </ul>
+                    </a>
+                </div>
             </div>
         </div>
         <!-- orders will show up under this -->
         <h2>Order</h2>
             <h3>お支払い待ち</h3>
-                <div id="sellercentercontainers">
-                    <div id="order">
+                <div class="sellercentercontainers">
+                    <div class="order-container">
+                        <div class="order">
+                            <a href="">
+                                <img src="../../image/shirt.png" alt="">
+                                <ul>
+                                    <li>商品1</li>
+                                    <li>1000円</li>
+                                    <li id="verify-button"><img src="../../image/verified.png" alt=""></li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="order">
+                            <a href="">
+                                <img src="../../image/shirt.png" alt="">
+                                <ul>
+                                    <li>商品2</li>
+                                    <li>1000円</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="order">
+                            <a href="">
+                                <img src="../../image/shirt.png" alt="">
+                                <ul>
+                                    <li>商品3</li>
+                                    <li>1000円</li>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            <h3>未発送</h3>
+            <div class="sellercentercontainers">
+                <div class="order-container">
+                    <div class="order">
                         <a href="">
                             <img src="../../image/shirt.png" alt="">
                             <ul>
                                 <li>商品1</li>
                                 <li>1000円</li>
-                                <li id="verify-button"><img src="../../image/verified.png" alt=""></li>
                             </ul>
                         </a>
                     </div>
-                    <div id="order">
+                    <div class="order">
                         <a href="">
                             <img src="../../image/shirt.png" alt="">
                             <ul>
                                 <li>商品2</li>
-                                <li>1000円</li>
+                                <li>1000円</li>          
+                                <li id="verify-button"><img src="../../image/verified.png" alt=""></li>
                             </ul>
                         </a>
                     </div>
-                    <div id="order">
+                    <div class="order">
                         <a href="">
                             <img src="../../image/shirt.png" alt="">
                             <ul>
@@ -84,154 +141,131 @@
                         </a>
                     </div>
                 </div>
-                
-            <h3>未発送</h3>
-            <div id="sellercentercontainers">
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品1</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
-                </div>
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品2</li>
-                            <li>1000円</li>          
-                            <li id="verify-button"><img src="../../image/verified.png" alt=""></li>
-                        </ul>
-                    </a>
-                </div>
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品3</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
-                </div>
             </div>
             <h3>発送済み</h3>
-            <div id="sellercentercontainers">
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品1</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
-                </div>
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品2</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
-                </div>
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品3</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
+            <div class="sellercentercontainers">
+                <div class="order-container">
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品1</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品2</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品3</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
             </div>
         
         <!-- 商品一覧 -->
-        <section id="my-products">
+        <section class="my-products">
             <h2>私の商品一覧</h2>
-            <div id="sellercentercontainers">
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品1</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
-                </div>
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品2</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
-                </div>
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品3</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
+            <div class="sellercentercontainers">
+                <div class="order-container">
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品1</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品2</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品3</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- 注文追跡 -->
-        <section id="order-tracking">
+        <section class="order-tracking">
             <h2>注文追跡</h2>
-            <div id="sellercentercontainers">
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品1</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
-                </div>
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品2</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
-                </div>
-                <div id="order">
-                    <a href="">
-                        <img src="../../image/shirt.png" alt="">
-                        <ul>
-                            <li>商品3</li>
-                            <li>1000円</li>
-                        </ul>
-                    </a>
+            <div class="sellercentercontainers">
+                <div class="order-container">
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品1</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品2</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="order">
+                        <a href="">
+                            <img src="../../image/shirt.png" alt="">
+                            <ul>
+                                <li>商品3</li>
+                                <li>1000円</li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- 商品登録 -->
-        <section id="product-registration">
+        <section class="product-registration">
             <h2>商品登録</h2>
-            <button id="register-product" >
+            <button class="register-product" >
                 <a href="商品登録ページ.html">商品を登録する</a>
             </button>
         </section>
-        
+        </div>
     </main>
 
     <!-- フッター (必要に応じて追加) -->
     <footer>
-        <!-- ...フッター内容... -->
+        <div id="footer-placeholder"></div>
+
     </footer>
 
     <!-- JavaScriptファイルのリンク -->
-    <script src="scripts.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>
