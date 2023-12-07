@@ -89,7 +89,7 @@ nav{
     padding: 15px;
     height: 70px;
     background-color: white;
-    border-bottom: solid rgb(187, 180, 180) 1px;
+    border-bottom: solid #ccc 1px;
 }
 
 nav div{
@@ -537,8 +537,49 @@ ul li a {
 
 
 /* shouhin shousai  ----------------------------- */
+#shouhin-shousai{
+    display: flex;
+    justify-content: center;
+}
 #shousai-nakami{
-    margin-top: ;
+    display: flex;
+    justify-content: center;
+    border: 1px #ccc solid;
+    margin: 20px 0 20px 0;
+    padding: 5%;
+    width: 80%;
+}
+#shousai-nakami img{
+    width: 500px;
+}
+
+/* Style for the buttons */
+.btn-kato,
+.btn-kau {
+    display: block;
+    width: 30%  ;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-kato{
+    background-color: #ffd814;
+}
+.btn-kau{
+    background-color: #ff9900;
+}
+.btn-kau:hover {
+    background-color: #e68a00; /* Darker color on hover */
+}
+.btn-kato:hover{
+    background-color: #c0a418a9;
 }
 
 
