@@ -551,6 +551,16 @@ ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 10px; /* Increase padding for more space */
+    background-color: #e0e0e0; /* Set a different background color */
+}
+
+.product-registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
     padding: 20px; /* Increase padding for more space */
     background-color: #e0e0e0; /* Set a different background color */
 }
@@ -575,7 +585,7 @@ ul li a {
 .register-product:hover {
     background-color: #357ae8; /* Change background color on hover */
 }
-
+/* セラーセンター終了 */
 
 
 /* shouhin shousai  ----------------------------- */
@@ -628,50 +638,3 @@ ul li a {
 }
 
 /* セラーセンター終了 */
-
-/* マイアカウントページに対してのCSS */
-#myaccount-page{
-    margin: 80px 0 50px 0;
-}
-#myaccount-page main{
-    margin: auto;
-    text-align: center;
-    width: 300px;
-    height: 230px;
-    background-color: white;
-    border: groove black 10px;
-    padding: 25px;
-    border-radius: 10px;
-}
-#user-greeting{
-    text-align: center;
-}
-#myaccount-page #actions{
-    display: flex;
-    flex-direction: column;
-}
-#myaccount-page #actions button{
-    margin-bottom: 30px;
-    background-color: #ffc36c;
-    border-radius: 5px;
-    padding: 5px;
-}
-#myaccount-page #actions button:hover{
-    opacity: 80%;
-}
-
-#myaccount-page #actions #logout-btn{
-    width: 100%;
-    padding: 5px 0px;
-    box-sizing: border-box;
-    display: block;
-    
-    margin-left: auto;
-    margin-right: auto;
-    background-color: black;
-    color: white;
-    font-size: large;
-    font-weight: bolder;
-    cursor: pointer;
-}
-/* マイアカウントページ終了 */
