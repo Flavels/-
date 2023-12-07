@@ -551,6 +551,16 @@ ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 10px; /* Increase padding for more space */
+    background-color: #e0e0e0; /* Set a different background color */
+}
+
+.product-registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
     padding: 20px; /* Increase padding for more space */
     background-color: #e0e0e0; /* Set a different background color */
 }
@@ -575,7 +585,7 @@ ul li a {
 .register-product:hover {
     background-color: #357ae8; /* Change background color on hover */
 }
-
+/* セラーセンター終了 */
 
 
 /* shouhin shousai  ----------------------------- */
@@ -628,4 +638,3 @@ ul li a {
 }
 
 
-/* セラーセンター終了 */
