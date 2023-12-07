@@ -27,6 +27,16 @@ $(document).ready(function() {
     });
     displayUsername();
 
+    $('#password-reset-form').on('submit', function(e) {
+        e.preventDefault();
+        resetPassword();
+    });
+
+    $('#recovery-form').on('submit', function(e) {
+        e.preventDefault();
+        redirectToPasswordReset();
+    });
+
 });
 
 function registerUser() {
@@ -133,6 +143,37 @@ function displayUsername() {
     var currentUsername = localStorage.getItem('currentUsername');
     if (currentUsername) {
         $('#username-display').text(currentUsername);
+    }
+}
+
+function resetPassword() {
+    var newPassword = $('#new-password').val();
+    var confirmPassword = $('#confirm-password').val();
+
+    if (newPassword === confirmPassword) {
+        var userData = JSON.parse(localStorage.getItem('userData'));
+
+        // 更新存储的用户密码
+        if (userData) {
+            userData.password = newPassword;
+            localStorage.setItem('userData', JSON.stringify(userData));
+            alert('パスワードがリセットされました。');
+            window.location.href = '../account_auth/login.html'; // 重定向到登录页面
+        }
+    } else {
+        alert('入力されたパスワードが一致しません。');
+    }
+}
+
+function redirectToPasswordReset() {
+    var email = $('#email').val();
+    var userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (userData && userData.email === email) {
+        // 如果邮箱匹配，重定向到密码重置页面
+        window.location.href = '../account/password-reset.html'; // 确保路径正确
+    } else {
+        alert('メールアドレスが見つかりません。');
     }
 }
 //ここまでは sign up ,login,logout機能,session 60分間/////////////////
