@@ -36,6 +36,8 @@ $(document).ready(function() {
         e.preventDefault();
         redirectToPasswordReset();
     });
+    // Display Search
+    displaySearchResults();
 
 });
 

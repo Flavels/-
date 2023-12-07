@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="../path/to/your/css/style.css">
 </head>
 <body>
+    <div id="navbar-placeholder"></div>
+    
     <div id="myaccount-page">
         <div id="user-greeting"><h1>こんにちは, <span id="username-display"></span>さん</h1></div>
-        
-        <div id="account-actions">
-            <a href="../account/アカウント編集ページ.html" class="btn">アカウント編集</a>
-            <a href="../account/アカウント削除ページ.html" class="btn">アカウント削除</a>
-            <a href="../account/ユーザー認証ページ.html" class="btn">ユーザー認証</a>
+        <main>
+        <div id="actions">
+            <button><a href="../account/アカウント編集ページ.html" class="btn">アカウント編集</a></button>
+            <button><a href="../account/アカウント削除ページ.html" class="btn">アカウント削除</a></button>
+            <button><a href="../account/ユーザー認証ページ.html" class="btn">ユーザー認証</a></button>
             <button id="logout-btn" class="btn">ログアウト</button>
         </div>
+        </main>
     </div>
+    <div id="footer-placeholder"></div>
 
     <script src="../../js/jquery-3.6.0.min.js"></script>
     <script src="../../js/script.js"></script>
