@@ -2,28 +2,14 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 
 .header {
     background-color: #00B0EC;
     padding: 10px 0;
-}
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.navbar .logo a {
-    text-decoration: none;
-    font-size: 24px;
-    color: red;
-}
-
-.nav-items input[type="search"] {
-    padding: 5px 10px;
-    margin-right: 20px;
 }
 
 .category-list {
@@ -50,20 +36,11 @@ body {
 
 /* ログインと新規登録ページに対してのCSS */
 #login, #newaccount{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-#login header, #newaccount header{
-    text-align: center;
-}
-#login header a, #newaccount header a{
-    text-decoration: none;
-    color: white;
-    font-size: 3em;
-    font-weight: bolder;
 }
 #login main, #newaccount main{
     background-color: white;
@@ -98,95 +75,186 @@ body {
 }
 /* ログインと新規登録ページ終了 */
 
-/* homepage  logo*/
-#homepage_login #logo img{
+/* navbar  logo*/
+nav #logo img{
     border-radius: 5px;
     width: 70px;
 }
 
-#homepage_login nav{
+nav{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-color: black;
-    color: white;
     height: 70px;
+    background-color: white;
+    z-index: 1;
+    border-bottom: solid black 1px;
 }
 
-#homepage_login nav div{
-    margin-right: 30px;
+nav div{
+    margin-right: 10px;
     font-size: 1.2em;
 }
-#homepage_login nav a{
+nav a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
-#homepage_login #search-box{
+nav #search-box{
     display: flex;
+    border: grey 1px solid;
 }
-#homepage_login #search-box input{
+nav #search-box input{
     width: 500px;
     padding: 15px;
     border: none;
 }
-#homepage_login #search-box button{
+nav #search-box button{
     background-color: #ffc36c;
     border: none;
     width: 80px;
 }
-#homepage_login #search-box button:hover{
+nav #search-box button:hover{
     border: none;
     opacity: .7;
 }
 
-/* account-menu nav */
-#homepage_login #account-menu #register{
-    margin-right: 30px;
+nav #account-menu #register{
+    margin-right: 15px;
 }
+nav #account-menu #login-mark{
+    margin-right: 15px;
+}
+nav #account-menu #myaccount{
+    margin-right: 15px;
+}
+
 
 /* ---------------------------------------------------------- */
 
 /* category loginpage */
 
 #homepage_login #category{
-    background: #232f3e;
-    color: white;
+    background: #f0f3f7;
     padding: 10px;
 }
 #homepage_login #category #category-flex{
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 #homepage_login #category #category-flex a{
-    color: white;
+    color: black;
 }
 
 #homepage_login #category #category-flex h3{
     margin-right: 30px;
 }
 
+/* 真贋チェックボックス */
+
+#shingan-page{ 
+    font-size: 1.5em; 
+    margin-left: 25px; 
+    padding-top: 10px;
+}
+#shingan-box{
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+/* チェックマーク */
+#verify-button img{
+    width: 40px;
+}
 /* 商品一覧 --------------------- */
 
-#shouhin-ichiran{
+#shouhin-ichiran {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
 }
-#shouhin-ichiran #shouhin{
+
+#shouhin-ichiran #shouhin, #shouhin-ichiran #shouhin-shingan{
     width: calc(33.3% - 20px);
     margin: 10px;
     box-sizing: border-box;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
 }
-#shouhin-ichiran img{
+
+#shouhin-ichiran #shouhin img,#shouhin-ichiran #shouhin-shingan img {
     max-width: 100%;
+    height: auto;
+}
+
+#shouhin-ichiran #shouhin h2, #shouhin-ichiran #shouhin-shingan h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+/* Footer Styles */
+
+footer{
+    background-color: #f0f3f7;
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer #footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+} 
+
+#footer-content .footer-section {
+    margin-bottom: 20px;
+}
+
+#footer-content .footer-section h4 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
 }
 
 /* オンラインチャットページに対してのCSS */
 #onchat{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -197,7 +265,6 @@ body {
 }
 #onchat header a{
     text-decoration: none;
-    color: white;
     font-size: 3em;
     font-weight: bolder;
 }
@@ -250,7 +317,7 @@ body {
 
 /*問い合わせページに対してのCSS */
 #help{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -261,7 +328,6 @@ body {
 }
 #help header a{
     text-decoration: none;
-    color: white;
     font-size: 3em;
     font-weight: bolder;
 }
@@ -304,7 +370,7 @@ body {
 
 /*よくある質問ページに対してのCSS */
 #faqs{
-    margin: 0;
+    margin: 80px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -315,7 +381,7 @@ body {
 }
 #faqs header a{
     text-decoration: none;
-    color: white;
+
     font-size: 3em;
     font-weight: bolder;
 }
@@ -422,3 +488,55 @@ body {
 }
 
 /* 商品登録ページ終了 */
+
+/* resultに対するCSS */
+#result-container{
+    display: block;
+    position: absolute;
+    margin:100px 0 0 50px;
+};
+
+/* result 終了 */
+
+/* セラーセンター終了 */
+/* セラーセンター終了 */
+#sellercentercontainers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#sellercentercontainers #order {
+    flex: 0 1 calc(20% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#sellercentercontainers #order a {
+    text-decoration: none;
+    color: black;
+}
+
+#sellercentercontainers #order img {
+    max-width: 100%;
+}
+
+#sellercentercontainers #order ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#sellercentercontainers #order li {
+    margin-bottom: 5px;
+}
+
+
+/* セラーセンター終了 */

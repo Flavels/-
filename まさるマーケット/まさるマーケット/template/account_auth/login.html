@@ -6,23 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン - まさる堂</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <style>
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("../../image/masaru.png");
-    background-size: 300px;
-}
-
-    </style>
 </head>
 
 <body>
+    <div id="navbar-placeholder"></div>
     <div id="login">
-        <header>
-            <a href="./login.html">まさる堂</a>
-        </header>
-
         <main>
             <h1>ログイン</h1>
             <form id="login-form">
@@ -31,6 +19,8 @@
 
                 <label for="password">パスワード</label><br>
                 <input type="password" id="password" name="password" required class="space"><br>
+
+                パスワードを忘れた場合は<a href="../account/アカウント復元ページ.html" style="text-decoration: underline; color: blue;">こちら</a>
 
                 <input type="submit" value="ログイン"  id="submit">
             </form>
@@ -46,7 +36,6 @@
 
         <script src="../../js/jquery-3.6.0.min.js"></script>
         <script src="../../js/script.js"></script>
-        <script src="../../js/login.js"></script>
         </div>
 </body>
 <!-- aa -->
