@@ -73,6 +73,10 @@ a{
 #login #submit:hover, #newaccount #submit:hover{
     opacity: 80%;
 }
+#login a{
+    text-decoration: underline;
+    color: blue;
+}
 /* ログインと新規登録ページ終了 */
 
 /* navbar  logo*/
@@ -650,11 +654,13 @@ ul li a {
     display: flex;
     flex-direction: column;
 }
-#myaccount-page #actions button{
+#myaccount-page #actions a button{
+    width: 100%;
     margin-bottom: 30px;
     background-color: #ffc36c;
     border-radius: 5px;
     padding: 5px;
+    cursor: pointer;
 }
 #myaccount-page #actions button:hover{
     opacity: 80%;
@@ -665,9 +671,9 @@ ul li a {
     padding: 5px 0px;
     box-sizing: border-box;
     display: block;
-    
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
     background-color: black;
     color: white;
     font-size: large;
@@ -675,3 +681,166 @@ ul li a {
     cursor: pointer;
 }
 /* マイアカウントページ終了 */
+
+/* アカウント編集ページに対してのCSS */
+#edit{
+    margin: 80px 0 50px 0;
+}
+#edit main{
+    margin: auto;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: groove black 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#edit main h1{
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+#edit #edit-form input{
+    width: 100%;
+    height: 2em;
+    margin-bottom: 10px;
+}
+#edit #edit-form #save-edit{
+    margin-top: 20px;
+    width: 100%;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#edit #save-edit:hover{
+    opacity: 80%;
+}
+/* アカウント編集ページ終了 */
+
+/* アカウント削除ページに対してのCSS */
+#delete{
+    margin: 80px 0 50px 0;
+}
+#delete main{
+    margin: auto;
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    border: groove black 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#delete main h1{
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+#delete main #delete-account{
+    margin-top: 40px;
+    width: 100%;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#delete main #delete-account:hover{
+    opacity: 80%;
+}
+/* アカウント削除に対するＣＳＳ終了 */
+
+/* ユーザー認証ページに対してのCSS */
+#auth{
+    margin: 80px 0 50px 0;
+}
+#auth main{
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border: groove black 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#auth main h1{
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+#auth #auth-form input{
+    width: 100%;
+    height: 2em;
+    margin-bottom: 10px;
+}
+#auth main #auth-form #auth-btn{
+    margin-top: 40px;
+    width: 100%;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#auth main #auth-form #auth-btn:hover{
+    opacity: 80%;
+}
+/* ユーザー認証に対するＣＳＳ終了 */
+
+/* アカウント復元ページに対してのCSS */
+#recovery{
+    margin: 80px 0 50px 0;
+}
+#recovery main{
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border: groove black 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#recovery main h1{
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+#recovery #recovery-form input{
+    width: 100%;
+    height: 2em;
+    margin-bottom: 10px;
+}
+#recovery main #recovery-form #recovery-btn{
+    margin-top: 20px;
+    width: 100%;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#recovery main #recovery-form #recovery-btn:hover{
+    opacity: 80%;
+}
+/* アカウント復元に対するＣＳＳ終了 */

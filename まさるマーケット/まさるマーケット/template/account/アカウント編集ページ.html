@@ -5,39 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>アカウント編集 - まさる堂</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
+    <div id="navbar-placeholder"></div>
+    <div id="edit">
+        <main>
+            <h1>アカウント編集</h1>
+            <form id="edit-form">
+                <label for="username">ユーザー名:</label><br>
+                <input type="text" id="username" name="username"><br>
 
-    <header>
-        <a href="/">まさる堂</a>
-    </header>
+                <label for="email">メールアドレス:</label><br>
+                <input type="email" id="email" name="email"><br>
 
-    <main>
-        <h1>アカウント編集</h1>
-        <form id="edit-account-form">
-            <label for="username">ユーザー名:</label>
-            <input type="text" id="username" name="username"><br>
+                <label for="password">新しいパスワード:</label>
+                <input type="password" id="password" name="password"><br>
 
-            <label for="email">メールアドレス:</label>
-            <input type="email" id="email" name="email"><br>
+                <label for="confirm-password">新しいパスワード確認:</label>
+                <input type="password" id="confirm-password" name="confirm-password"><br>
 
-            <label for="password">新しいパスワード:</label>
-            <input type="password" id="password" name="password"><br>
+                <input id="save-edit" type="submit" value="変更を保存">
+            </form>
+        </main>
+    </div>
+    <div id="footer-placeholder"></div>
 
-            <label for="confirm-password">新しいパスワード確認:</label>
-            <input type="password" id="confirm-password" name="confirm-password"><br>
-
-            <input type="submit" value="変更を保存">
-        </form>
-    </main>
-
-    <footer>
-        <!-- フッター内容 -->
-    </footer>
-
-    <script src="scripts.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>
