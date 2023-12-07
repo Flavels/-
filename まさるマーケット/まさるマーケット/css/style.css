@@ -440,10 +440,21 @@ ul li a {
     margin-bottom: 15px;
 }
 
+
+
 .seller_page .form-group label {
     display: block;
     margin-bottom: 5px;
 }
+
+.seller_page .form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.seller_page .form-group label {
+    font-weight: normal;
+}
+
 
 .seller_page .form-group input[type="text"],
 .seller_page .form-group input[type="number"],
@@ -451,13 +462,14 @@ ul li a {
 .seller_page .form-group select,
 .seller_page .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 .seller_page .form-group textarea {
     height: 100px;
+    width: 500px;
 }
 
 .seller_page button {
