@@ -10,37 +10,49 @@
 
 <body>
 
-    <!-- ヘッダー -->
-    <header>
-        <a href="/">まさる堂</a>
-        <a href="index.html">ホームに戻る</a>
-    </header>
+    <div id="navbar-placeholder"></div>
 
     <!-- お気に入りコンテンツ -->
+    <div id="favorite">
     <main>
         <h1>お気に入り</h1>
 
         <!-- お気に入りの商品リスト -->
         <section id="favorite-items">
-            <h2>お気に入りの商品</h2>
-            <div class="product-list">
+            <h2>お気に入りの商品一覧</h2>
                 <!-- お気に入りに追加された商品 -->
-                <div class="product-item">
-                    <img src="favorite-product1.jpg" alt="お気に入り商品1">
-                    <p>商品1の説明</p>
-                    <button>詳細を見る</button>
-                </div>
+                <table>
+                    <tr>
+                        <td><img src="../../image/shirt.png" alt="お気に入り商品1"></td>
+                        <td>
+                            <h1>クラシックコットンTシャツ</h1><br>
+                            <h2>¥1,999</h2> <br>
+                            <p> プレミアムクオリティの生地を使用したクラシックコットンTシャツ。快適さとスタイルを両立した逸品です。カジュアルな外出や日常のワードローブの一部として最適です。</p>
+                            <a href="../products/商品詳細.html"><button>詳細を見る</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
                 <!-- ...他のお気に入り商品... -->
-            </div>
         </section>
     </main>
+    </div>
 
-    <!-- フッター -->
-    <footer>
-        <!-- フッター内容 -->
-    </footer>
+   <div id="footer-placeholder"></div>
 
-    <script src="scripts.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>

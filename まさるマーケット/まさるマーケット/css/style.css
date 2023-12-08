@@ -90,7 +90,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 15px 0;
     height: 70px;
     background-color: white;
     border-bottom: solid #ccc 1px;
@@ -210,7 +210,7 @@ nav #account-menu #myaccount{
 footer{
     background-color: #f0f3f7;
     color: black;
-    padding: 30px 0;
+    padding:30px 0;
     text-align: center;
     width: 100%;
 }
@@ -898,3 +898,78 @@ ul li a {
     opacity: 80%;
 }
 /* password reset css end */
+
+/* 注文履歴ページに対するCSS*/
+
+#history main{
+    margin:0 0 50px 30px;
+}
+#history main table{
+    width: 1350px;
+    height: 1000px;
+    border: 1px solid ;
+    border-radius: 5px;
+}
+#history main table td{
+    border-bottom: 1px solid;
+}
+
+/* 注文履歴終了*/
+
+/* お気に入りページに対するCSS */
+#favorite main{
+    margin: 0 0 50px 30px;
+}
+#favorite main #favorite-items table{
+    width: 1350px;
+    height: 1000px;
+    border: 1px solid ;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#favorite main #favorite-items table td{
+    border-bottom: 1px solid;
+}
+#favorite main #favorite-items table tr{
+    height: 100px;
+}
+#favorite img{
+    height: 300px;
+}
+/* お気に入り終了 */
+
+/* カートページに対するCSS */
+#cart main{
+    margin: 0 0 50px 30px;
+}
+#cart main #cart-items table{
+    width: 1350px;
+    border: 1px solid ;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#cart main #cart-items table td{
+    border-bottom: 1px solid;
+}
+#cart img{
+    height: 300px;
+}
+#goto-checkout button{
+    margin-top: 40px;
+    width: 50%;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#goto-checkout button:hover{
+    opacity: 80%;
+}
+/* カート終了 */
